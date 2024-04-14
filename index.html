@@ -1,81 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
-		<link rel="icon" type="image/png" href="/img/dlantech.png" />
-		<title>Dlan - Home</title>
-		<style>
-			* {
-				box-sizing: border-box;
-				font-family: Poppins, sans-serif;
-				font-weight: 500;
-				/* background-color: #f6f8fd; */
-			}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        <link rel="icon" type="image/png" href="/img/dlantech.png" />
+        <title>My Portfolio | Muhammad Fadlan Alfian</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: Poppins, sans-serif;
+                font-weight: 500;
+                /* background-color: #f6f8fd; */
+            }
 
-			.nav-item {
-				padding-left: 25px;
-			}
+            .nav-item {
+                padding-left: 25px;
+            }
 
-			.nav-link:hover {
-				color: #2447f9;
-				transition: all 0.4s;
-			}
+            .nav-link:hover {
+                color: #2447f9;
+                transition: all 0.4s;
+            }
 
-			.content {
-				margin-top: 10vw;
-				margin-right: 10vw;
-			}
-		</style>
-	</head>
-	<body>
-		<!-- ! NavBar -->
-		<nav class="navbar navbar-expand-lg">
-			<div class="container">
-				<a class="navbar-brand" href="/">Portofolio</a>
+            #home {
+                margin: 10vw auto;
+            }
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+            #skill {
+                margin: 15vw auto;
+            }
 
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="/">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/skill/">Skill</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/about/">About</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+            #about {
+                margin: 15vw auto 5vw auto;
+            }
 
-		<section class="container content d-flex justify-content-center align-items-center">
-			<div class="container d-flex justify-content-center align-items-center">
-				<div class="container text-left">
-					<p class="fs-3">Hi everyone,<br />I'm Muhammad Fadlan Alfian</p>
-					<p class="fs-4">I'm a <span id="element">Freelance</span></p>
-				</div>
+            @media only screen and (max-width: 768px) {
+                #home {
+                    margin: 45vw auto;
+                }
 
-				<img src="/img/self.png" class="rounded-circle mx-auto d-block" alt="MySelf" width="25%" height="25%" />
-			</div>
-		</section>
+                section img {
+                    display: none;
+                }
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-		<script>
-			var typed = new Typed('#element', {
-				strings: ['Front-End Developer', 'Network Engineer'],
-				typeSpeed: 40,
-			});
-		</script>
-	</body>
+                #skill {
+                    margin: 45vw auto;
+                }
+
+                #about {
+                    margin: 45vw auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ! NavBar -->
+        <nav class="navbar navbar-expand-lg sticky-top bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#home">Portfolio</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skill">Skill</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Akhir NavBar -->
+
+        <!-- ! Hero -->
+        <section id="home">
+            <div class="container text-center">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6">
+                        <p class="fs-3">Hi,<br />I'm Muhammad Fadlan Alfian</p>
+                        <p class="fs-4">I'm a <span id="element">Freelance</span></p>
+                    </div>
+                    <div class="col">
+                        <img src="/img/self.png" class="rounded-circle mx-auto" alt="MySelf" width="50%" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Akhir Hero -->
+
+        <!-- ! Skill -->
+        <section id="skill">
+            <div class="container justify-content-center align-items-center">
+                <div class="row text-center">
+                    <div class="col">
+                        <p class="fs-4">SKILL</p>
+                    </div>
+                </div>
+                <div class="row p-4">
+                    <div class="box col">
+                        <label for="html">HTML</label>
+                        <div class="progress" id="html" role="progressbar" aria-label="Animated striped example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-4">
+                    <div class="box2 col">
+                        <label for="css">CSS</label>
+                        <div class="progress" id="css" role="progressbar" aria-label="Animated striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-4">
+                    <div class="box3 col">
+                        <label for="js">JAVASCRIPT</label>
+                        <div class="progress" id="js" role="progressbar" aria-label="Animated striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-4">
+                    <div class="box4 col">
+                        <label for="php">PHP</label>
+                        <div class="progress" id="php" role="progressbar" aria-label="Animated striped example" aria-valuenow="5%" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 5%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-4">
+                    <div class="box5 col">
+                        <label for="python">PYTHON</label>
+                        <div class="progress" id="python" role="progressbar" aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Akhir Skill -->
+
+        <!-- ! About -->
+        <section id="about">
+            <div class="container justify-content=center align-items-center">
+                <div class="row text-center">
+                    <div class="col">
+                        <p class="fs-4">ABOUT</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card container text-center" style="width: 25rem; margin-top: 5rem">
+                            <div class="card-body">
+                                <img src="/img/self.png" alt="MySelf" class="rounded-circle img-thumbnail" width="150" />
+                                <h5 class="card-title">Muhammad Fadlan Alfian</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Freshgraduate</h6>
+                                <p>"Sebaik-baik manusia adalah mereka yang bermanfaat bagi orang lain"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Akhir About -->
+
+        <!-- !Footer -->
+        <footer class="text-center">
+            <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/mfadlanalfian/" class="fw-bold">Muhammad Fadlan Alfian</a></p>
+        </footer>
+        <!-- Akhir Footer -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed("#element", {
+                strings: ["Front-End Developer", "IT Security"],
+                typeSpeed: 40,
+            });
+        </script>
+    </body>
 </html>
